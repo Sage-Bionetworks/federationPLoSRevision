@@ -1,5 +1,6 @@
 require(utils)
 require(sessionTools)
+require(devtools)
 
 #' Submit a trained model for a breast cancer competition
 #'
@@ -72,5 +73,6 @@ submitCompetitionModel_micmaTrained <- function(modelName = NULL, trainedModel=N
   
   submittedModelLayer <- storeEntity(submittedModelLayer)
   
-  propertyValue(submittedModelLayer, "id")
+  source_url("https://raw.github.com/AAMargolin/AdamTestCode/master/synapseExecute/addTableDescriptionToFolderEntity.R")
+  addTableDescriptionToFolderEntity(parentDatasetId)
 }

@@ -1,5 +1,10 @@
 require(survival)
 
+#' CoxphModel
+#'
+#' @export
+#'
+ 
 CoxphModel <- setRefClass(Class = "CoxphModel",
                                fields=c("model","numFeatures","numRounds"),
                                

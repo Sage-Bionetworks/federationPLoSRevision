@@ -1,11 +1,15 @@
 library(devtools)
 
-install_github("Sage-Bionetworks/federationPLoSRevision")
+myGitHubUsername <- "AAMargolin"
+myGitHubPassword <- "Set password here"
+install_github("federationPLoSRevision", username="Sage-Bionetworks", auth_user=myGithubUsername, password=myGithubPassword)
 
 require(federationPLoSRevision)
 require(BCC)
 require(predictiveModeling)
 
+### if not automatically configured
+synapseLogin()
 metabricTrainingData <- loadMetabricMicmaTrainingData()
 
 coxTestModel <-CoxphModel$new()

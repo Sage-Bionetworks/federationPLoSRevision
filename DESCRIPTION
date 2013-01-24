@@ -1,0 +1,21 @@
+Package: federationPLoSRevision
+Maintainer: Who to complain to <yourfault@somewhere.net>
+Author: ubuntu
+Version: 1.0
+License: GPL-3
+Title: 
+Description: 
+Suggests:
+    testthat,
+    roxygen2
+Collate:
+    'federationPLoSRevision-package.r'
+    'CoxphModel.R'
+    'DemoModel.R'
+    'loadFederationMetabricTestData1.R'
+    'loadFederationMetabricTestData2.R'
+    'loadFederationMetabricTrainingData.R'
+    'loadFederationMicmaData.R'
+    'loadMetabricMicmaTrainingData.R'
+    'unitTest_mod.R'
+    'submitCompetitionModel_micmaTrained.R'

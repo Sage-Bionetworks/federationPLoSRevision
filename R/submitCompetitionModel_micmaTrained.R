@@ -33,7 +33,7 @@ submitCompetitionModel_micmaTrained <- function(modelName = NULL, trainedModel=N
   submittedModelLayer <- addObject(submittedModelLayer, cvPerformance, "cvPerformance")
   submittedModelLayer <- addObject(submittedModelLayer, sessionSummary(), "sessionSummary")
   
-  metabricTrainingData <- loadFederationMetabricTrainingData()
+  metabricTrainingData <- loadMetabricMicmaTrainingData()
   metabricTestData1 <- loadFederationMetabricTestData1()
   metabricTestData2 <- loadFederationMetabricTestData2()
   micmaData <- loadFederationMicmaData()

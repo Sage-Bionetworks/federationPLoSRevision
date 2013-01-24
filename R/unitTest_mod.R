@@ -19,11 +19,6 @@ unitTest_mod <- function(){
   metabricTrainingData1 <- loadMetabricMicmaTrainingData()
   micmaData <- loadFederationMicmaData()
   
-  
-  # only difference between previous Federation model submission was "Clinical Variates"
-  # Coxph model is used for this unit test with new validation dataset
-  source("~/SageGit/Sage-Bionetworks/Federation/CoxphModel.R")
-  
   # Metabric
   coxTest<-CoxphModel$new()
   coxTest$customTrain(metabricTrainingData$exprData, metabricTrainingData$copyData,
@@ -41,5 +36,9 @@ unitTest_mod <- function(){
                        metabricTrainingData1$clinicalFeaturesData, metabricTrainingData1$clinicalSurvData)
   micmaPredictions <- coxTest2$customPredict(micmaData$exprData, micmaData$copyData,
                                             micmaData$clinicalFeaturesData)
+  
+  trainPerformance <- SurvivalModelPerformance$new(as.numeric(micmaPredictions), micmaData$clinicalSurvData)
+  cIndex_micma <- trainPerformance$getExactConcordanceIndex()
+  print(paste("cIndex_micma", cIndex_micma))
 
 }

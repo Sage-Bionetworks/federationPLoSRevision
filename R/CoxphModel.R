@@ -27,7 +27,7 @@ CoxphModel <- setRefClass(Class = "CoxphModel",
                                  customPredict = function(exprData, copyData, clinicalFeaturesData){
                                    A<-clinicalFeaturesData
                                    
-                                   predictedResponse <- predict(.self$model, data=A)
+                                   predictedResponse <- predict(.self$model, newdata=A)
                                    
                                    return(predictedResponse)
                                  }

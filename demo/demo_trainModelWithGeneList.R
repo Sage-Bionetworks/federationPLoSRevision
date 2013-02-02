@@ -25,7 +25,7 @@ demo_trainModelWithGeneList <- function(synapseGeneListId = "syn1652976"){
                            metabricTrainingData$clinicalFeaturesData, metabricTrainingData$clinicalSurvData)
   
   modelClassFile <- "/home/ubuntu/SageGit/Sage-Bionetworks/federationPLoSRevision/R/CoxphModel.R"
-  submitCompetitionModel_micmaTrained(modelName = "CoxTestModel_mammapringGenes", trainedModel=coxTestModel, rFiles=modelClassFile,
+  submitCompetitionModel_micmaTrained(modelName = "CoxTestModel_mammaprintGenes", trainedModel=coxTestModel, rFiles=modelClassFile,
                                       algorithm="Cox", geneList=geneListEntity$properties$name)
   
 }

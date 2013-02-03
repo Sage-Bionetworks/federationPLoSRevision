@@ -71,8 +71,11 @@ submitCompetitionModel_micmaTrained <- function(modelName = NULL, trainedModel=N
   submittedModelLayer$annotations$cIndex_metabric2 <- cIndex_metabric2
   submittedModelLayer$annotations$cIndex_micma <- cIndex_micma
   
+  submittedModelLayer$annotations$geneList <- geneList
+  submittedModelLayer$annotations$algorithm <- algorithm
+  
   submittedModelLayer <- storeEntity(submittedModelLayer)
   
-  source_url("https://raw.github.com/AAMargolin/AdamTestCode/master/synapseExecute/addTableDescriptionToFolderEntity.R")
-  addTableDescriptionToFolderEntity(parentDatasetId)
+#   source_url("https://raw.github.com/AAMargolin/AdamTestCode/master/synapseExecute/addTableDescriptionToFolderEntity.R")
+#   addTableDescriptionToFolderEntity(parentDatasetId)
 }

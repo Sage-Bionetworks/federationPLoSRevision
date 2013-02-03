@@ -5,6 +5,14 @@ Version: 1.0
 License: GPL-3
 Title: 
 Description: 
+Depends:
+    R(>= 2.14.0),
+    predictiveModeling,
+    synapseClient,
+    survival,
+    methods,
+    affy,
+    sessionTools
 Suggests:
     testthat,
     roxygen2

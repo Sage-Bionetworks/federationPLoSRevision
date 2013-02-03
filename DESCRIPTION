@@ -17,7 +17,6 @@ Suggests:
     testthat,
     roxygen2
 Collate:
-    'federationPLoSRevision-package.r'
     'CoxphModel.R'
     'DemoModel.R'
     'loadFederationMetabricTestData1.R'

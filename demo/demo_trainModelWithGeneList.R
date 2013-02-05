@@ -6,7 +6,7 @@ install_github("federationPLoSRevision", username="Sage-Bionetworks", auth_user=
 
 require(federationPLoSRevision)
 
-demo_trainModelWithGeneList <- function(synapseGeneListId = "syn1652976"){
+demo_trainModelWithGeneList <- function(synapseGeneListId = "syn1670947"){
   geneListEntity <- loadEntity(synapseGeneListId)
   geneList <- read.table(paste(geneListEntity$cacheDir, geneListEntity$files[[1]], sep="/"), stringsAsFactors=FALSE)
   geneList <- geneList[,1]
